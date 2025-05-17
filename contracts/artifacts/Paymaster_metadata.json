@@ -1,0 +1,111 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "GasSponsored",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "admin",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "walletAddress",
+						"type": "address"
+					}
+				],
+				"name": "sponsorGas",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"sponsorGas(address)": {
+					"params": {
+						"walletAddress": "The address of the SmartWallet to receive ETH"
+					}
+				}
+			},
+			"title": "Paymaster Contract This contract sponsors gas for SmartWallet users by sending ETH or receiving ERC20s",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"sponsorGas(address)": {
+					"notice": "Sponsor gas by sending ETH to the user's SmartWallet"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/SmartWallet.sol": "Paymaster"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/SmartWallet.sol": {
+			"keccak256": "0x8fe7d60e8a2cd5bce227814bb2398a6186e8b7d888a9b20878e7ead8ca1efc89",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://368c59fa511d8bdf6c54151f434fcd9edbf2721aef7ed2d0f9189751249c17ea",
+				"dweb:/ipfs/QmStakLC9o2sDR9bWAN6ZHwdNAoyC4UNwkyfGHtabL1wCr"
+			]
+		}
+	},
+	"version": 1
+}
