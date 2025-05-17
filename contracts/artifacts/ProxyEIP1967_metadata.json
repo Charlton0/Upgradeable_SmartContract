@@ -1,0 +1,176 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_implementation",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousAdmin",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newAdmin",
+						"type": "address"
+					}
+				],
+				"name": "AdminChanged",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "implementation",
+						"type": "address"
+					}
+				],
+				"name": "Upgraded",
+				"type": "event"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"inputs": [],
+				"name": "admin",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newAdmin",
+						"type": "address"
+					}
+				],
+				"name": "changeAdmin",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "implementation",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newImplementation",
+						"type": "address"
+					}
+				],
+				"name": "upgradeTo",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"details": "Uses delegatecall to forward calls to implementation contract",
+			"kind": "dev",
+			"methods": {
+				"changeAdmin(address)": {
+					"params": {
+						"newAdmin": "Address of the new admin"
+					}
+				},
+				"upgradeTo(address)": {
+					"params": {
+						"newImplementation": "Address of the new implementation contract"
+					}
+				}
+			},
+			"title": "Simplified EIP-1967 Proxy Contract",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"admin()": {
+					"notice": "Returns current admin address"
+				},
+				"changeAdmin(address)": {
+					"notice": "Change proxy admin address"
+				},
+				"implementation()": {
+					"notice": "Returns current implementation address"
+				},
+				"upgradeTo(address)": {
+					"notice": "Upgrade implementation contract address"
+				}
+			},
+			"notice": "Allows upgrading implementation address following EIP-1967 standard",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Proxy.sol": "ProxyEIP1967"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Proxy.sol": {
+			"keccak256": "0x883d13cc561b526ea2c2a24b6fe031890ed36b7fd94569f536e6410eaa08ec52",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://387e65a571d0c3c690f4b49b1c7f95306635c4c1b5f81d6e4a281ed2a81eedac",
+				"dweb:/ipfs/QmafkuxFr12dXzxkGefy8g8ME2ZAEYiF14FsyF4Usbe862"
+			]
+		}
+	},
+	"version": 1
+}
